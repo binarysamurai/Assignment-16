@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+    <div trans>
+        <h1>
+            Assignment 4 is here.
+        </h1>
+    </div>
+    <script type="text/javascript">
+        var app = angular.module('myApp', []);
+        app.directive('trans', function () {
+            return {
+                restrict: 'A',
+                template: '<div>Here is the assignment<h1 ng-transclude></h1></div>',
+                transclude: true,
+                replace: true
+            };
+        });
+
+    </script>
+</body>
+</html>
